@@ -1,0 +1,114 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	height: 100%;
+	font: 400 16px/1.25 sans-serif;
+}
+body {
+	position: relative;
+	min-height: 100%;
+	margin: 0;
+	padding: 8em 2em;
+}
+main {
+	display: block;
+	max-width: 30em;
+	margin: 0 auto 4em;
+}
+main::before,
+main::after {
+	position: absolute;
+	top: 1rem;
+	left: 2rem;
+	width: 14rem;
+}
+main::before {
+	content: "oops-a-daisy";
+	color: #9f9f9f;
+	font-family: serif;
+	font-size: 200%;
+}
+main::after {
+	content: "/ˈʊp.səˌdeɪ.zi/";
+	margin-top: 2em;
+	color: #ccc;
+	font-size: 150%;
+}
+h1 {
+	font-size: 175%;
+	font-weight: inherit;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a::after {
+	content: attr(href);
+	display: block;
+	margin-top: 1ex;
+	color: #9f9f9f;
+	font-size: 87.5%;
+}
+footer a {
+	display: block;
+	width: 20em;
+	margin: 1px auto;
+	padding: 1em 2em 2em 1.5em;
+	border-left: .5em solid transparent;
+}
+footer div {
+	position: relative;
+	height: 3em;
+	margin-bottom: 1em;
+}
+footer svg {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	max-width: 12em;
+	max-height: 2em;
+}
+@media (max-width: 30em) {
+	footer a {
+		width: auto;
+		margin: 1px -2em;
+	}
+}
+@media (min-width: 54em) {
+	footer {
+		text-align: center;
+		max-width: 60em;
+		margin: 0 auto;
+	}
+	footer a {
+		display: inline-block;
+		margin: 1em 2em;
+		text-align: left;
+	}
+}
+.sorry {
+	box-sizing: content-box;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 0;
+	width: 0;
+	border: 0 solid transparent;
+	border-right-color: #9f9f9f;
+	border-width: 9.7148279em 6em 0 0;
+}
+footer a[href*="finno"] {
+	border-left-color: rgb(0,189,89);
+}
+footer a[href*="finno"]:focus ~ .sorry,
+footer a[href*="finno"]:hover ~ .sorry {
+	border-right-color: rgb(0,189,89);
+}
+footer a[href*="trinn"] {
+	border-left-color: rgb(0,211,229);
+}
+footer a[href*="trinn"]:focus ~ .sorry,
+footer a[href*="trinn"]:hover ~ .sorry {
+	border-right-color: rgb(0,211,229);
+}
