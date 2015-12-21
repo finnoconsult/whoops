@@ -8,6 +8,6 @@
   },
   "devDependencies": {
     "jade": "^1.11.0",
-    "minifier": "^0.7.1",
+    "minifier": "^0.7.1"
   }
 }
