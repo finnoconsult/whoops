@@ -1,6 +1,6 @@
 {
   "name": "whoops",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "CC-BY-4.0",
   "repository": {
     "type": "git",
@@ -9,5 +9,10 @@
   "devDependencies": {
     "jade": "^1.11.0",
     "minifier": "^0.7.1"
+  },
+  "scripts": {
+    "build:css": "minify style.css",
+    "build:html": "jade index.jade --out public/",
+    "build": "npm run build:css && npm run build:html"
   }
 }
