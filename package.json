@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build:css": "minify style.css",
-    "build:html": "jade index.jade --out public/",
+    "build:html": "jade *.jade --out public/",
     "build": "npm run build:css && npm run build:html"
   }
 }
