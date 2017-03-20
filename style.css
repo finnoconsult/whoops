@@ -3,7 +3,8 @@
 }
 html {
 	height: 100%;
-	background: #f2f2f2;
+	background: #f2f4f6;
+	color: rgb(35,31,32);
 	font: 400 16px/1.25 sans-serif;
 }
 body {
@@ -14,33 +15,42 @@ body {
 }
 main {
 	display: block;
-	max-width: 30em;
-	margin: 0 auto 4em;
+	margin: 0 0 4em;
 }
 main::before,
 main::after {
 	position: absolute;
 	top: 1rem;
 	left: 2rem;
-	width: 14rem;
+	color: rgba(35,31,32,.4);
 }
 main::before {
 	content: "oops-a-daisy";
-	color: #9f9f9f;
 	font-family: serif;
 	font-size: 200%;
 }
 main::after {
 	content: "/ˈʊp.səˌdeɪ.zi/";
 	margin-top: 2em;
-	color: #ccc;
-	font-size: 150%;
+	font-size: 125%;
 }
 h1 {
-	font-size: 175%;
-	font-weight: inherit;
+	font-size: inherit;
+	font-weight: 700;
+}
+h1,
+p {
+	display: inline;
+}
+h1::after {
+	content: " ";
 }
 a {
+	display: block;
+	margin: 1px -2em;
+	padding: 2em 2em 2em 1.5em;
+	background: #fff;
+	border-left: .5em solid rgb(0,189,89);
 	color: inherit;
 	text-decoration: none;
 }
@@ -48,48 +58,27 @@ a::after {
 	content: attr(href);
 	display: block;
 	margin-top: 1ex;
-	color: #9f9f9f;
+	color: rgb(0,189,89);
 	font-size: 87.5%;
 }
-footer a {
-	display: block;
-	width: 20em;
-	margin: 1px auto;
-	padding: 1em 2em 2em 1.5em;
-	background: #fff;
-	border-left: .5em solid transparent;
-}
-footer div {
-	position: relative;
-	height: 3em;
+svg {
+	max-width: 100%;
 	margin-bottom: 1em;
+	overflow: visible;
 }
-footer svg {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	max-width: 12em;
-	max-height: 2em;
-}
-@media (max-width: 30em) {
-	footer a {
-		width: auto;
-		margin: 1px -2em;
+@media (min-width: 25em) {
+	main {
+		padding: 0 2em;
+	}
+	main,
+	a {
+		width: 20em;
+		margin-right: auto;
+		margin-left: auto;
 	}
 }
-@media (min-width: 54em) {
-	footer {
-		text-align: center;
-		max-width: 60em;
-		margin: 0 auto;
-	}
-	footer a {
-		display: inline-block;
-		margin: 1em 2em;
-		text-align: left;
-	}
-}
-.sorry {
+body::before {
+	content: "";
 	box-sizing: content-box;
 	position: absolute;
 	right: 0;
@@ -97,20 +86,6 @@ footer svg {
 	height: 0;
 	width: 0;
 	border: 0 solid transparent;
-	border-right-color: #9f9f9f;
-	border-width: 9.7148279em 6em 0 0;
-}
-footer a[href*="finno"] {
-	border-left-color: rgb(0,189,89);
-}
-footer a[href*="finno"]:focus ~ .sorry,
-footer a[href*="finno"]:hover ~ .sorry {
 	border-right-color: rgb(0,189,89);
-}
-footer a[href*="trinn"] {
-	border-left-color: rgb(0,211,229);
-}
-footer a[href*="trinn"]:focus ~ .sorry,
-footer a[href*="trinn"]:hover ~ .sorry {
-	border-right-color: rgb(0,211,229);
+	border-width: 9.7148279em 6em 0 0;
 }

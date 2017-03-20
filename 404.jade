@@ -4,22 +4,18 @@ html(lang="en")
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width,initial-scale=1.0")
 		meta(name="robots", content="noindex, follow")
-		title Service not available
+		title Not found
 		style
 			include style.min.css
-		link(rel="icon", type="image/x-icon", sizes="16x16", href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAGFBMVEWfn5+srKy6urrFxcXU1NTc3Nzx8fH+/v740GSHAAAAVklEQVQI12NggAH2cjAoYGBPYC0vZTCHMAoZzSAMA2YxEIOljEGZDcwoZDQAM1gdmAMgIgLiDmCGEkM4hGHIVA5mJCmwQRjFDOFQEeHy8kC1AoSlMAAAgPgbO6PPUDAAAAAASUVORK5CYII=")
+		each f in [16, 32]
+			link(rel="icon", type="image/x-icon", sizes="#{f}x#{f}", href="https://www.finnoconsult.at/img/avatar-#{f}.png")
 	body
 		main
-			h1 This service is currently unavailable.
-			p If you think this must be a mistake, please let us know.
-			p We are sorry for any inconvenience this may have caused.
+			h1 There seems to be no content for your request.
+			p If you think this must be a mistake, please let us know. We are sorry for any inconvenience this may have caused.
 		footer
 			a(href="https://www.finnoconsult.at/")
 				div
-					include logo-finnoconsult.svg
-				| FInno Consult GmbH
-			a(href="https://trinn.consulting/")
-				div
-					include logo-trinn.svg
-				| TRINN Consulting GmbH
-			i.sorry
+					include logo.svg
+				| FInno Consult 
+				abbr(lang="de") GmbH
