@@ -1,10 +1,10 @@
 {
   "name": "whoops",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "license": "CC-BY-4.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TrinnConsulting/whoops.git"
+    "url": "https://github.com/finnoconsult/whoops.git"
   },
   "devDependencies": {
     "jade": "^1.11.0",
